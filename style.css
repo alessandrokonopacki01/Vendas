@@ -1,89 +1,105 @@
-body{
-background: radial-gradient(circle at top, #1a0026, #000000);
-font-family: Arial, sans-serif;
-color:white;
-text-align:center;
-margin:0;
+/* Configurações Gerais de Fundo e Fonte */
+body {
+    background: radial-gradient(circle at top, #1a0026, #000000); /*  */
+    font-family: Arial, sans-serif; /*  */
+    color: white; /*  */
+    text-align: center; /*  */
+    margin: 0; /*  */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* container principal */
-
-.container{
-max-width:800px;
-margin:auto;
-padding:30px;
+.container {
+    max-width: 1200px; /* Aumentado para caber os itens lado a lado */
+    margin: auto;
+    padding: 30px;
 }
 
-/* título */
-
-h1{
-font-size:48px;
-color:#00eaff;
-text-shadow:
-0 0 5px #00eaff,
-0 0 10px #00eaff,
-0 0 20px #ff00ff;
+/* Título com efeito Neon */
+h1 {
+    font-size: 56px;
+    color: #00eaff; /*  */
+    text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 40px #ff00ff; /*  */
+    margin-bottom: 40px;
 }
 
-/* subtitulo */
-
-h2{
-color:#ffd700;
-text-shadow:0 0 8px #ffd700;
+/* Estrutura de Colunas (Flexbox) */
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Ajusta para celular automaticamente */
 }
 
-/* caixa de informações */
-
-.card{
-background:rgba(0,0,0,0.6);
-border:2px solid #ff00ff;
-border-radius:15px;
-padding:20px;
-margin:20px 0;
-box-shadow:
-0 0 10px #ff00ff,
-0 0 20px #00eaff;
+/* Imagens Laterais */
+.produto-img img, .tabela-img img {
+    max-width: 280px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
 }
 
-/* lista de beneficios */
-
-ul{
-text-align:left;
-max-width:500px;
-margin:auto;
-font-size:18px;
+/* Card Central */
+.card {
+    background: rgba(0, 0, 0, 0.7); /*  */
+    border: 2px solid #ff00ff; /*  */
+    border-radius: 20px; /*  */
+    padding: 30px;
+    min-width: 320px;
+    box-shadow: 0 0 15px #ff00ff, 0 0 30px #00eaff; /*  */
 }
 
-/* preço */
-
-.preco{
-font-size:40px;
-color:#00ff9c;
-text-shadow:0 0 10px #00ff9c;
-margin:20px;
+h2 {
+    color: #ffd700; /*  */
+    text-shadow: 0 0 8px #ffd700; /*  */
+    font-size: 22px;
 }
 
-/* botão */
-
-.botao{
-display:inline-block;
-background:linear-gradient(45deg,#ff00ff,#00eaff);
-padding:15px 40px;
-font-size:22px;
-border-radius:30px;
-color:white;
-text-decoration:none;
-box-shadow:
-0 0 10px #ff00ff,
-0 0 20px #00eaff;
-transition:0.3s;
+ul {
+    text-align: left; /*  */
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 250px;
 }
 
-/* efeito hover */
+ul li {
+    margin-bottom: 10px;
+    font-size: 18px; /*  */
+}
 
-.botao:hover{
-transform:scale(1.05);
-box-shadow:
-0 0 20px #ff00ff,
-0 0 40px #00eaff;
+/* Preço */
+.preco {
+    font-size: 45px;
+    color: #00ff9c; /*  */
+    text-shadow: 0 0 15px #00ff9c; /*  */
+    margin: 25px 0;
+}
+
+/* Botão Comprar */
+.botao {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff00ff, #00eaff); /*  */
+    padding: 15px 50px;
+    font-size: 22px; /*  */
+    font-weight: bold;
+    border-radius: 50px;
+    color: white; /*  */
+    text-decoration: none; /*  */
+    box-shadow: 0 0 20px #ff00ff; /*  */
+    transition: 0.3s; /*  */
+}
+
+.botao:hover {
+    transform: scale(1.1); /*  */
+    box-shadow: 0 0 30px #00eaff;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    opacity: 0.8;
 }
