@@ -1,0 +1,89 @@
+body{
+background: radial-gradient(circle at top, #1a0026, #000000);
+font-family: Arial, sans-serif;
+color:white;
+text-align:center;
+margin:0;
+}
+
+/* container principal */
+
+.container{
+max-width:800px;
+margin:auto;
+padding:30px;
+}
+
+/* título */
+
+h1{
+font-size:48px;
+color:#00eaff;
+text-shadow:
+0 0 5px #00eaff,
+0 0 10px #00eaff,
+0 0 20px #ff00ff;
+}
+
+/* subtitulo */
+
+h2{
+color:#ffd700;
+text-shadow:0 0 8px #ffd700;
+}
+
+/* caixa de informações */
+
+.card{
+background:rgba(0,0,0,0.6);
+border:2px solid #ff00ff;
+border-radius:15px;
+padding:20px;
+margin:20px 0;
+box-shadow:
+0 0 10px #ff00ff,
+0 0 20px #00eaff;
+}
+
+/* lista de beneficios */
+
+ul{
+text-align:left;
+max-width:500px;
+margin:auto;
+font-size:18px;
+}
+
+/* preço */
+
+.preco{
+font-size:40px;
+color:#00ff9c;
+text-shadow:0 0 10px #00ff9c;
+margin:20px;
+}
+
+/* botão */
+
+.botao{
+display:inline-block;
+background:linear-gradient(45deg,#ff00ff,#00eaff);
+padding:15px 40px;
+font-size:22px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+box-shadow:
+0 0 10px #ff00ff,
+0 0 20px #00eaff;
+transition:0.3s;
+}
+
+/* efeito hover */
+
+.botao:hover{
+transform:scale(1.05);
+box-shadow:
+0 0 20px #ff00ff,
+0 0 40px #00eaff;
+}
