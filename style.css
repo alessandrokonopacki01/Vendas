@@ -104,27 +104,7 @@ footer {
     opacity: 0.8;
 }
 
-/* A imagem dentro do Modal */
-.modal-conteudo {
-    margin: auto;
-    display: block;
-    /* Ajusta a largura e altura para não cortar */
-    width: auto;
-    height: auto;
-    max-width: 90%;  /* Não deixa a imagem encostar nas bordas laterais */
-    max-height: 85vh; /* Limita a altura a 85% da altura da tela para não cortar o topo/fundo */
-    
-    /* Centralização vertical extra */
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    
-    border: 2px solid #00eaff;
-    box-shadow: 0 0 30px #00eaff;
-    border-radius: 10px;
-}
-
-/* Ajuste no fundo do modal para garantir que o scroll não quebre o layout */
+/* O fundo do Modal */
 .modal {
     display: none; 
     position: fixed;
@@ -133,9 +113,27 @@ footer {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* Impede scroll interno que causa cortes visuais */
+    
+    /* ATIVA A ROLAGEM */
+    overflow-y: auto; 
+    
     background-color: rgba(0,0,0,0.95);
     backdrop-filter: blur(8px);
+    padding: 20px 0; /* Espaço extra para não encostar no topo/base ao rolar */
+}
+
+/* A imagem dentro do Modal */
+.modal-conteudo {
+    display: block;
+    margin: 20px auto; /* Centraliza horizontalmente e dá margem vertical */
+    
+    /* REMOVA o translateY e o top:50% para a rolagem funcionar corretamente */
+    max-width: 95%; 
+    height: auto; /* Mantém a proporção original */
+    
+    border: 2px solid #00eaff;
+    box-shadow: 0 0 30px #00eaff;
+    border-radius: 10px;
 }
 
 /* Botão de fechar */
