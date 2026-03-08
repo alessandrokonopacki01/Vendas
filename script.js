@@ -1,21 +1,25 @@
-// Pega os elementos
-var modal = document.getElementById("meuModal");
-var img = document.getElementById("imgGarrafa"); // Id da sua imagem
-var modalImg = document.getElementById("imgExpandida");
-var span = document.getElementsByClassName("fechar")[0];
+// Seleciona o modal e a imagem de destino
+const modal = document.getElementById("meuModal");
+const modalImg = document.getElementById("imgExpandida");
+const span = document.querySelector(".fechar");
 
-// Quando clicar na imagem, abre o modal
-img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-}
+// Seleciona todas as imagens com a classe 'zoom'
+const imagens = document.querySelectorAll(".zoom");
 
-// Quando clicar no (x), fecha o modal
+// Adiciona o evento de clique em cada uma delas
+imagens.forEach(img => {
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src; // Pega o caminho da imagem clicada
+    }
+});
+
+// Fecha ao clicar no X
 span.onclick = function() { 
     modal.style.display = "none";
 }
 
-// Fecha se clicar fora da imagem
+// Fecha ao clicar em qualquer lugar fora da imagem
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
