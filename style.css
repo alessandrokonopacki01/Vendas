@@ -120,7 +120,7 @@ footer {
 /* A imagem dentro do Modal */
 .modal-conteudo {
     margin: auto;
-    display: block;
+    display: inline-block;
     width: 80%;
     max-width: 700px;
     margin-top: 50px;
